@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <main class="container mt-5">
+    <div class="col-12 col-sm-10 col-lg-6 offset-lg-3 offset-sm-1">
+      <form action="/request_done/" class="card mb-5" method="POST">
+        <div class="card-body text-center pt-5">
+          <h1 class="h3 card-title mt-4 mb-2">Подбор преподавателя</h1>
+          <p class="px-5">Напишите, что вам нужно и&nbsp;мы&nbsp;подберем отличных&nbsp;ребят</p>
+        </div>
+        <hr>
+        <div class="card-body mx-3">
+          <div class="row">
+            <div class="col">
+              <p>Какая цель занятий?</p>
+              <div class="form-check ">
+                <input type="radio" class="form-check-input" name="goal" value="Для путешествий⛱" id="goal1" checked>
+                <label class="form-check-label" for="goal1">
+                  Для путешествий
+                </label> 
+              </div>
+              <div class="form-check ">
+                <input type="radio" class="form-check-input" name="goal" value="Для школы🏫" id="goal2">
+                <label class="form-check-label" for="goal2">
+                  Для учебы
+                </label>
+              </div>
+              <div class="form-check ">
+                <input type="radio" class="form-check-input" name="goal" value="Для работы🏢" id="goal3">
+                <label class="form-check-label" for="goal2">
+                  Для работы
+                </label>
+              </div>
+              <div class="form-check ">
+                <input type="radio" class="form-check-input" name="goal" value="Для переезда🚜" id="goal4">
+                <label class="form-check-label" for="goal2">
+                  Для переезда
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <p>Сколько времени есть?</p>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="time" value="1-2" id="time1">
+                <label class="form-check-label" for="time1">
+                  1-2 часа в&nbsp;неделю
+                </label> 
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="time" value="3-5" id="time2">
+                <label class="form-check-label" for="time2">
+                  3-5 часов в&nbsp;неделю
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="time" value="5-7" id="time3" checked>
+                <label class="form-check-label" for="time3">
+                  5-7 часов в&nbsp;неделю
+                </label> 
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="time" value="7-10" id="time4">
+                <label class="form-check-label" for="time4">
+                  7-10 часов в&nbsp;неделю
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card-body mx-3">
+          <label class="mb-1 mt-2" for="clientName">Вас зовут</label>
+          <input class="form-control" type="text" name="clientName" id="clientName">
+
+          <label class="mb-1 mt-2" for="clientPhone">Ваш телефон</label>
+          <input class="form-control" type="tel"  name="clientPhone" id="clientPhone">
+          <input type="submit" class="btn btn-primary mt-4 mb-2" value="Найдите мне преподавателя">
+        </div>
+      </form>
+    </div>
+  </main>
+  {% endblock %}
